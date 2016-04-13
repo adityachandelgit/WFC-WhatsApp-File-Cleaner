@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/row_icon_imv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="7dp"
+        android:paddingBottom="3dp"
+        android:layout_marginRight="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="File Name"
+        android:paddingTop="3dp"
+        android:id="@+id/row_file_name_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/row_icon_imv"
+        android:layout_toEndOf="@+id/row_icon_imv"
+        android:layout_marginLeft="5dp" />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Length"
+        android:id="@+id/audio_length_tv"
+        android:layout_alignBottom="@+id/audio_icon_imv"
+        android:layout_toRightOf="@+id/audio_icon_imv"
+        android:layout_toEndOf="@+id/audio_icon_imv" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:textSize="12sp"
+        android:id="@+id/row_file_size_tv"
+        android:layout_alignBottom="@+id/row_icon_imv"
+        android:layout_alignLeft="@+id/row_file_name_tv"
+        android:layout_alignStart="@+id/row_file_name_tv"
+        android:padding="0dp"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Date"
+        android:id="@+id/row_date_tv"
+        android:layout_alignTop="@+id/row_file_size_tv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,668 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/bottom_bar"
+            android:id="@+id/scrollView">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:background="@drawable/relative_button_black">
+
+                    <Button
+                        android:id="@+id/main_all_button"
+                        android:background="@drawable/delete_all64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:layout_alignBottom="@+id/main_all_button"
+                        android:layout_toRightOf="@+id/main_all_button"
+                        android:layout_toEndOf="@+id/main_all_button"
+                        android:id="@+id/main_all_total_files_tv"
+                        android:text="Total Files:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/main_all_total_size_tv"
+                        android:text="Total Size:"
+                        android:layout_alignBottom="@+id/main_all_button"
+                        android:layout_toRightOf="@+id/main_all_button"
+                        android:layout_toEndOf="@+id/main_all_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_all_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/main_all_title_tv"
+                        android:text="Delete All Files!"
+                        android:layout_alignLeft="@+id/main_all_total_files_tv"
+                        android:layout_alignStart="@+id/main_all_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp"
+                        android:textIsSelectable="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_image"
+                    android:background="@drawable/relative_button_purple"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_image_button"
+                        android:background="@drawable/photo64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/main_image_total_files_tv"
+                        android:text="Total Files:"
+                        android:layout_alignBottom="@+id/main_image_button"
+                        android:layout_toRightOf="@+id/main_image_button"
+                        android:layout_toEndOf="@+id/main_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/main_image_total_size_tv"
+                        android:text="Total Size:"
+                        android:layout_alignBottom="@+id/main_image_button"
+                        android:layout_toRightOf="@+id/main_image_button"
+                        android:layout_toEndOf="@+id/main_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_image_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Images"
+                        android:id="@+id/main_image_title_tv"
+                        android:layout_alignLeft="@+id/main_image_total_files_tv"
+                        android:layout_alignStart="@+id/main_image_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_profilepic"
+                    android:background="@drawable/relative_button_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_profilepic_button"
+                        android:background="@drawable/profilepic64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:text="Files: 100"
+                        android:id="@+id/main_profilepic_total_files_tv"
+                        android:layout_alignBottom="@+id/main_profilepic_button"
+                        android:layout_toRightOf="@+id/main_profilepic_button"
+                        android:layout_toEndOf="@+id/main_profilepic_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="Total Size: 100.10 MB"
+                        android:id="@+id/main_profilepic_total_size_tv"
+                        android:layout_alignBottom="@+id/main_profilepic_button"
+                        android:layout_toRightOf="@+id/main_profilepic_button"
+                        android:layout_toEndOf="@+id/main_profilepic_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_profilepic_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Profile Pictures"
+                        android:id="@+id/main_profilepic_title_tv"
+                        android:layout_alignLeft="@+id/main_profilepic_total_files_tv"
+                        android:layout_alignStart="@+id/main_profilepic_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_video"
+                    android:background="@drawable/relative_button_maroon"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_video_button"
+                        android:background="@drawable/video64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:text="Total Files:"
+                        android:id="@+id/main_video_total_files_tv"
+                        android:layout_alignBottom="@+id/main_video_button"
+                        android:layout_toRightOf="@+id/main_video_button"
+                        android:layout_toEndOf="@+id/main_video_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="Total Size:"
+                        android:id="@+id/main_video_total_size_tv"
+                        android:layout_alignBottom="@+id/main_video_button"
+                        android:layout_toRightOf="@+id/main_video_button"
+                        android:layout_toEndOf="@+id/main_video_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_video_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Videos"
+                        android:id="@+id/main_video_title_tv"
+                        android:layout_alignLeft="@+id/main_video_total_files_tv"
+                        android:layout_alignStart="@+id/main_video_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_audio"
+                    android:background="@drawable/relative_button_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_audio_button"
+                        android:background="@drawable/audio64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:text="Total Files:"
+                        android:id="@+id/main_audio_total_files_tv"
+                        android:layout_alignBottom="@+id/main_audio_button"
+                        android:layout_toRightOf="@+id/main_audio_button"
+                        android:layout_toEndOf="@+id/main_audio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="Total Size:"
+                        android:id="@+id/main_audio_total_size_tv"
+                        android:layout_alignBottom="@+id/main_audio_button"
+                        android:layout_toRightOf="@+id/main_audio_button"
+                        android:layout_toEndOf="@+id/main_audio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_audio_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Audio"
+                        android:id="@+id/main_audio_title_tv"
+                        android:layout_alignLeft="@+id/main_audio_total_files_tv"
+                        android:layout_alignStart="@+id/main_audio_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_voiceNotes"
+                    android:background="@drawable/relative_button_orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_voice_notes_button"
+                        android:background="@drawable/voicenotes64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:text="Total Files:"
+                        android:id="@+id/main_voice_notes_total_files_tv"
+                        android:layout_alignBottom="@+id/main_voice_notes_button"
+                        android:layout_toRightOf="@+id/main_voice_notes_button"
+                        android:layout_toEndOf="@+id/main_voice_notes_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="Total Size:"
+                        android:id="@+id/main_voice_notes_total_size_tv"
+                        android:layout_alignBottom="@+id/main_voice_notes_button"
+                        android:layout_toRightOf="@+id/main_voice_notes_button"
+                        android:layout_toEndOf="@+id/main_voice_notes_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_voice_notes_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Voice Notes"
+                        android:id="@+id/main_voice_notes_title_tv"
+                        android:layout_alignLeft="@+id/main_voice_notes_total_files_tv"
+                        android:layout_alignStart="@+id/main_voice_notes_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_wallpaper"
+                    android:background="@drawable/relative_button_brown"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_wallpaper_button"
+                        android:background="@drawable/wallpaper64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:text="Total Files:"
+                        android:id="@+id/main_wallpaper_total_files_tv"
+                        android:layout_alignBottom="@+id/main_wallpaper_button"
+                        android:layout_toRightOf="@+id/main_wallpaper_button"
+                        android:layout_toEndOf="@+id/main_wallpaper_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="Total Size:"
+                        android:id="@+id/main_wallpaper_total_size_tv"
+                        android:layout_alignBottom="@+id/main_wallpaper_button"
+                        android:layout_toRightOf="@+id/main_wallpaper_button"
+                        android:layout_toEndOf="@+id/main_wallpaper_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_wallpaper_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Wallpapers"
+                        android:id="@+id/main_wallpaper_title_tv"
+                        android:layout_alignLeft="@+id/main_wallpaper_total_files_tv"
+                        android:layout_alignStart="@+id/main_wallpaper_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/main_relative_button_backups"
+                    android:background="@drawable/relative_button_indigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/main_backups_button"
+                        android:background="@drawable/backup64"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:gravity="start"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:text="Total Files:"
+                        android:id="@+id/main_backups_total_files_tv"
+                        android:layout_alignBottom="@+id/main_backups_button"
+                        android:layout_toRightOf="@+id/main_backups_button"
+                        android:layout_toEndOf="@+id/main_backups_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="18dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="Total Size:"
+                        android:id="@+id/main_backups_total_size_tv"
+                        android:layout_alignBottom="@+id/main_backups_button"
+                        android:layout_toRightOf="@+id/main_backups_button"
+                        android:layout_toEndOf="@+id/main_backups_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="85dp" />
+
+                    <Button
+                        android:id="@+id/main_backups_delete_button"
+                        android:background="@drawable/button_delete_main_pressable"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Backups"
+                        android:id="@+id/main_backups_title_tv"
+                        android:layout_alignLeft="@+id/main_backups_total_files_tv"
+                        android:layout_alignStart="@+id/main_backups_total_files_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#000"
+            android:weightSum="5"
+            android:gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView_main_rate"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/star48" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView_quiz"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/quiz" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView_noads"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/noads48" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/imageView_main_wfs"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/wfs" />
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:id="@+id/imageView_main_share"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/sharethis48" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:id="@+id/startAppLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#000"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/startapp_banner"/>
+
+        </LinearLayout>-->
+
+    </RelativeLayout>
+
+</LinearLayout>

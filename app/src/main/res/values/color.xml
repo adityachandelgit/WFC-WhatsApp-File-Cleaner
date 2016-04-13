@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_two_purple">#8651A1</color>
+    <color name="bottom_two_purple_pressed">#B43F74</color>
+    <color name="fab_delete_selected">#e6c82d73</color>
+    <color name="fab_delete_all">#e68a42ae</color>
+</resources>

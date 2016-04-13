@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.retrospectivecreations.wfc" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.retrospectivecreations.wfc.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.ImageActivity"
+            android:label="@string/title_activity_image"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.ProfilePicActivity"
+            android:label="@string/title_activity_profile_pic"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.AudioActivity"
+            android:label="@string/title_activity_audio"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.VoiceNotesActivity"
+            android:label="@string/title_activity_voice_notes"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.WallpaperActivity"
+            android:label="@string/title_activity_wallpaper"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.retrospectivecreations.wfc.BackupsActivity"
+            android:label="@string/title_activity_backups"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.android.publish.AppWallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name="com.appnext.appnextsdk.DownloadService"/>
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!--<service
+            android:name="com.ironsource.mobilcore.MobileCoreReport"
+            android:enabled="true"
+            android:exported="false" android:process=":mcServiceProcess">
+        </service>
+        <receiver
+            android:name="com.ironsource.mobilcore.InstallationTracker"
+            android:enabled="true"
+            android:process=":installationTracker">
+        </receiver>-->
+
+    </application>
+
+</manifest>

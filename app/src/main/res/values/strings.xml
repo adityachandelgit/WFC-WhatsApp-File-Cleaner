@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">W-Clean: WhatzApp File Cleaner</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_profile_pic">ProfilePicActivity</string>
+    <string name="title_activity_audio">AudioActivity</string>
+    <string name="title_activity_voice_notes">VoiceNotesActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_wallpaper">WallpaperActivity</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="title_activity_backups">BackupsActivity</string>
+    <string name="title_activity_test">Test</string>
+    <string name="howto">WFC is simple tool for cleaning unwanted whatsapp files. Check out the pictures below to understand WFC\'s basic usage:\n\n\n1. How to view list of files.</string>
+    <string name="howto2">2. How to delete either a bunch of files or all of the files at once.</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-7768394173357020/6223218192</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+</resources>
